@@ -16,6 +16,7 @@ import { submitContactForm } from '../../services/contactService';
 const CONTACT_CARDS = [
   { icon: MessageCircle, label: CONTACT_INFO.whatsappUS.label, href: CONTACT_INFO.whatsappUS.href },
   { icon: Phone, label: CONTACT_INFO.callUS.label, href: CONTACT_INFO.callUS.href },
+  { icon: Phone, label: CONTACT_INFO.whatsappIndia.label, href: CONTACT_INFO.whatsappIndia.href },
   { icon: Mail, label: CONTACT_INFO.email.label, href: CONTACT_INFO.email.href },
 ];
 

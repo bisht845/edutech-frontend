@@ -54,6 +54,7 @@ import { TESTIMONIALS } from '../../data/testimonials';
 import { useCountUp } from '../../hooks/useCountUp';
 import { cn } from '../../lib/utils';
 import video from "../../../public/Edutech_Graphics.mp4"
+import { DOMAINS } from '../../data/domains';
 /* -------------------------------------------------------------------------- */
 /*  Placeholder / fallback content                                            */
 /*  Every block below reads from `course.<field>` first and only falls back   */
@@ -113,7 +114,7 @@ const DEFAULT_BATCHES = [
 
   {
     mode: 'Live Virtual Class',
-    dateRange: 'NOV 1 - Nov 14',
+    dateRange: 'Nov 1 - Nov 14',
     time: 'IST: 07:30 PM – 09:50 PM',
     type: 'Weekday Batch · 15 Sessions',
     shift: 'Evening Batch',
@@ -125,7 +126,7 @@ const DEFAULT_BATCHES = [
 
   {
     mode: 'Live Virtual Class',
-    dateRange: 'NOV 15 - Nov 30',
+    dateRange: 'Nov 15 - Nov 30',
     time: 'IST: 07:00 AM – 11:30 AM',
     type: 'Weekday Batch · 8 Sessions',
     shift: 'Morning Batch',
@@ -134,33 +135,33 @@ const DEFAULT_BATCHES = [
     price: 399,
     originalPrice: 999,
   },
-  {
-    mode: 'Live Virtual Class',
-    dateRange: 'Oct 18  - Oct 28 ',
-    time: 'IST: 06:00 AM – 08:20 AM',
-    type: 'Weekend Batch · 15 Sessions',
-    shift: 'Morning Batch',
-    trainer: 'V. Raghavan',
-    discount: '50% off',
-    price: 399,
-    originalPrice: 999,
-  },
+  // {
+  //   mode: 'Live Virtual Class',
+  //   dateRange: 'Oct 18  - Oct 28 ',
+  //   time: 'IST: 06:00 AM – 08:20 AM',
+  //   type: 'Weekend Batch · 15 Sessions',
+  //   shift: 'Morning Batch',
+  //   trainer: 'V. Raghavan',
+  //   discount: '50% off',
+  //   price: 399,
+  //   originalPrice: 999,
+  // },
 
 
-  {
-    mode: 'Live Virtual Class',
-    dateRange: 'Nov 7 - Dec 5',
-    time: 'IST: 06:00 AM – 08:20 AM',
-    type: 'Weekend Batch · 15 Sessions',
-    shift: 'Morning Batch',
-    trainer: 'V. Raghavan',
-    discount: '50% off',
-    price: 399,
-    originalPrice: 999,
-  },
+  // {
+  //   mode: 'Live Virtual Class',
+  //   dateRange: 'Nov 7 - Dec 5',
+  //   time: 'IST: 06:00 AM – 08:20 AM',
+  //   type: 'Weekend Batch · 15 Sessions',
+  //   shift: 'Morning Batch',
+  //   trainer: 'V. Raghavan',
+  //   discount: '50% off',
+  //   price: 399,
+  //   originalPrice: 999,
+  // },
   {
     mode: 'Weakend Class',
-    dateRange: 'Oct 22 - Nov 15',
+    dateRange: 'Dec 15 - Dec 25',
     time: 'IST: 06:00 AM – 10:00 AM',
     type: 'Weekend Batch · 15 Sessions',
     shift: 'Morning Batch',
@@ -1447,8 +1448,29 @@ export default function CourseDetailPage() {
               <h2 className="mt-4 text-2xl font-semibold text-ink sm:text-3xl">People Also Viewed Courses Like</h2>
             </div>
           </div>
+ <div className="mt-12 border-t  pt-6 flex justify-center">
+                {/* <h3 className="font-mono text-xs font-semibold uppercase tracking-wider px-2">Offerings</h3> */}
+                <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+                  {DOMAINS.map((domain) => (
+                    <Link
+                      key={domain.id}
+                      onClick={() => openContact({ variant: 'course', meta: { title: course.title } })}
+                      className="text-sm font-semibold px-4 py-2 rounded-md border border-transparent transition-all duration-300 hover:text-primary-700 hover:rounded-xl hover:border-primary-700"
+                    >
+                      {domain.name}
+                    </Link>
+                  ))}
+                 
+                <Link
+                  to="/courses"
+                  className="text-sm font-semibold px-4 py-2 rounded-md border border-transparent transition-all duration-300 hover:text-primary-700 hover:rounded-xl hover:border-primary-700"
+                >
+                  View All Courses
+                </Link>
 
-          <StaggerGroup className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                </div>
+        </div>
+          {/* <StaggerGroup className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {relatedCourses.map((related) => (
               <motion.div key={related.id} variants={staggerItemVariants}>
                 <div className="group overflow-hidden rounded-2xl border border-ink/[0.06] bg-white shadow-card transition-shadow hover:shadow-card-hover">
@@ -1482,7 +1504,7 @@ export default function CourseDetailPage() {
                       <div>
                         <p className="text-xs text-ink-soft">From</p>
                         <p className="font-mono text-lg font-semibold text-ink">
-                          {format(related.priceINR, related.priceUSD)}
+                          ${(related.priceINR, related.priceUSD)}
                         </p>
                       </div>
                       <Button
@@ -1498,10 +1520,10 @@ export default function CourseDetailPage() {
                 </div>
               </motion.div>
             ))}
-          </StaggerGroup>
+          </StaggerGroup> */}
         </Section>
       )}
-
+     
       {/* ---------------------------------------------------------------- */}
       {/* Cities                                                            */}
       {/* ---------------------------------------------------------------- */}

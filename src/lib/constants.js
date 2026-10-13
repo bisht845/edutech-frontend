@@ -46,23 +46,23 @@ export const SOCIAL_LINKS = [
 ];
 
 export const FOOTER_COMPANY_LINKS = [
-  { label: 'About Us', to: '/about' },
+  { label: 'About Us', to: 'https://pmp.edutechskills.com/about' },
   { label: 'Careers', to: '/careers' },
   { label: 'Contact Us', to: '/contact' },
 ];
 
 export const FOOTER_PARTNER_LINKS = [
-  { label: 'Become an Instructor', to: '/become-an-instructor' },
-  { label: 'Affiliate', to: '/affiliate' },
+  { label: 'Become an Instructor', to: 'https://pmp.edutechskills.com/become-an-instructor' },
+  { label: 'Affiliate', to: 'https://pmp.edutechskills.com/affiliate' },
 ];
 
 export const FOOTER_RESOURCE_LINKS = [
-  { label: 'Blogs', to: '/blog' },
-  { label: 'Help Center', to: '/support' },
+  { label: 'Blogs', to: 'https://pmp.edutechskills.com/blog' },
+  { label: 'Help Center', to: 'https://pmp.edutechskills.com/support' },
 ];
 
 export const FOOTER_SUPPORT_LINKS = [
-  { label: 'FAQs', to: '/faq' },
-  { label: 'Terms and Conditions', to: '/terms' },
-  { label: 'Privacy Policy', to: '/privacy' },
+  { label: 'FAQs', to: 'https://www.edutechskills.com/faq' },
+  { label: 'Terms and Conditions', to: 'https://www.edutechskills.com/terms-of-service' },
+  { label: 'Privacy Policy', to: 'https://www.edutechskills.com/privacy-policy' },
 ];

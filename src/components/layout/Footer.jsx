@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { GraduationCap, Facebook, Instagram, Linkedin, MessageCircle, Phone, Mail } from 'lucide-react';
-import { DOMAINS } from '../../data/domains';
+
 import {
   CONTACT_INFO,
   FOOTER_COMPANY_LINKS,
@@ -63,30 +63,9 @@ export default function Footer() {
           </div>
 
           <FooterColumn title="Company" links={FOOTER_COMPANY_LINKS} />
-          <FooterColumn title="Partner with Us" links={FOOTER_PARTNER_LINKS} />
-          <FooterColumn title="Resources" links={FOOTER_RESOURCE_LINKS} />
-          <FooterColumn title="Support" links={FOOTER_SUPPORT_LINKS} />
-        </div>
-
-        <div className="mt-12 border-t border-ink/10 pt-8">
-          <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-white">Offerings</h3>
-          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
-            {DOMAINS.map((domain) => (
-              <Link
-                key={domain.id}
-                to={`/courses?category=${encodeURIComponent(domain.name)}`}
-                className="text-sm text-white transition-colors hover:text-ink"
-              >
-                {domain.name}
-              </Link>
-            ))}
-            <Link to="/courses" className="text-sm font-semibold text-white hover:text-primary-700">
-              View All Courses
-            </Link>
-          </div>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 gap-8 border-t border-ink/10 pt-8 md:grid-cols-3">
+          {/* <FooterColumn title="Partner with Us" links={FOOTER_PARTNER_LINKS} /> */}
+          {/* <FooterColumn title="Resources" links={FOOTER_RESOURCE_LINKS} /> */}
+          {/* <FooterColumn title="Support" links={FOOTER_SUPPORT_LINKS} /> */}
           <div>
             <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-white">Contact Us</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-white">
@@ -116,8 +95,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {CONTACT_INFO.addresses.map((address) => (
+             {CONTACT_INFO.addresses.map((address) => (
             <div key={address.country}>
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-white">
                 {address.country}
@@ -133,7 +111,56 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-ink/10 pt-6 sm:flex-row">
+       
+
+        <div className="mt-12 grid grid-cols-1 gap-8 border-t border-ink/10 pt-8 md:grid-cols-3">
+          {/* <div>
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-white">Contact Us</h3>
+            <ul className="mt-4 space-y-2.5 text-sm text-white">
+              <li className="flex items-center gap-2">
+                <MessageCircle size={15} className="shrink-0 text-white" />
+                <a href={CONTACT_INFO.whatsappUS.href} className="hover:text-ink">
+                  {CONTACT_INFO.whatsappUS.label}
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone size={15} className="shrink-0 text-white" />
+                <a href={CONTACT_INFO.callUS.href} className="hover:text-ink">
+                  {CONTACT_INFO.callUS.label}
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone size={15} className="shrink-0 text-white" />
+                <a href={CONTACT_INFO.whatsappIndia.href} className="hover:text-ink">
+                  {CONTACT_INFO.whatsappIndia.label}
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail size={15} className="shrink-0 text-primary-500" />
+                <a href={CONTACT_INFO.email.href} className="hover:text-ink">
+                  {CONTACT_INFO.email.label}
+                </a>
+              </li>
+            </ul>
+          </div> */}
+
+          {/* {CONTACT_INFO.addresses.map((address) => (
+            <div key={address.country}>
+              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-white">
+                {address.country}
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-white">
+                {address.lines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </p>
+            </div>
+          ))} */}
+        </div>
+
+        <div className="mt-2 flex flex-col items-center justify-between gap-4 border-t border-ink/10 pt-6 sm:flex-row">
           <p className="text-xs text-ink-soft">© 2026 Edutech Skills. All rights reserved.</p>
           <div className="flex gap-5">
             {FOOTER_SUPPORT_LINKS.map((link) => (
