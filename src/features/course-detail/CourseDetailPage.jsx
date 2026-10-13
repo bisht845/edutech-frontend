@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import {
   CheckCircle2,
@@ -53,10 +53,11 @@ import { useModal } from '../../context/ModalContext';
 import { TESTIMONIALS } from '../../data/testimonials';
 import { useCountUp } from '../../hooks/useCountUp';
 import { cn } from '../../lib/utils';
+import video from "../../../public/Edutech_Graphics.mp4"
 /* -------------------------------------------------------------------------- */
 /*  Placeholder / fallback content                                            */
 /*  Every block below reads from `course.<field>` first and only falls back   */
-/*  to this placeholder data when the API doesn't provide it yet â€” swap in    */
+/*  to this placeholder data when the API doesn't provide it yet — swap in    */
 /*  real content from courseService whenever it's ready, no markup changes.   */
 /* -------------------------------------------------------------------------- */
 
@@ -112,76 +113,72 @@ const DEFAULT_BATCHES = [
 
   {
     mode: 'Live Virtual Class',
-    dateRange: 'Oct 24 - Nov 21',
-    time: 'IST: 07:30 PM â€“ 09:50 PM',
-    type: 'Weekday Batch Â· 15 Sessions',
+    dateRange: 'NOV 1 - Nov 14',
+    time: 'IST: 07:30 PM – 09:50 PM',
+    type: 'Weekday Batch · 15 Sessions',
     shift: 'Evening Batch',
     trainer: 'S. Singh',
     discount: '50% off',
-    price: 24999,
-    originalPrice: 49998,
+    price: 399,
+    originalPrice: 999,
   },
 
   {
     mode: 'Live Virtual Class',
-    dateRange: 'Oct 26 - Nov 05',
-    time: 'IST: 07:00 AM â€“ 11:30 AM',
-    type: 'Weekday Batch Â· 8 Sessions',
+    dateRange: 'NOV 15 - Nov 30',
+    time: 'IST: 07:00 AM – 11:30 AM',
+    type: 'Weekday Batch · 8 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '50% off',
-    price: 24999,
-    originalPrice: 49998,
+    price: 399,
+    originalPrice: 999,
   },
-
-
-
-
   {
     mode: 'Live Virtual Class',
-    dateRange: 'Nov 02 - Nov 12 ',
-    time: 'IST: 06:00 AM â€“ 08:20 AM',
-    type: 'Weekend Batch Â· 15 Sessions',
+    dateRange: 'Oct 18  - Oct 28 ',
+    time: 'IST: 06:00 AM – 08:20 AM',
+    type: 'Weekend Batch · 15 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '50% off',
-    price: 24999,
-    originalPrice: 49998,
+    price: 399,
+    originalPrice: 999,
   },
 
 
   {
     mode: 'Live Virtual Class',
     dateRange: 'Nov 7 - Dec 5',
-    time: 'IST: 06:00 AM â€“ 08:20 AM',
-    type: 'Weekend Batch Â· 15 Sessions',
+    time: 'IST: 06:00 AM – 08:20 AM',
+    type: 'Weekend Batch · 15 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '50% off',
-    price: 24999,
-    originalPrice: 49998,
+    price: 399,
+    originalPrice: 999,
   },
   {
     mode: 'Weakend Class',
     dateRange: 'Oct 22 - Nov 15',
-    time: 'IST: 06:00 AM â€“ 10:00 AM',
-    type: 'Weekend Batch Â· 15 Sessions',
+    time: 'IST: 06:00 AM – 10:00 AM',
+    type: 'Weekend Batch · 15 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '50% off',
-    price: 23999,
-    originalPrice: 49998,
+    price: 399,
+    originalPrice: 999,
   },
   {
     mode: 'Weakend Class',
-    dateRange: 'Oct 25 - Nov 20',
-    time: 'IST: 06:00 AM â€“ 10:00 AM',
-    type: 'Weekend Batch Â· 15 Sessions',
+    dateRange: 'Jan 10 - Jan 20',
+    time: 'IST: 06:00 AM – 10:00 AM',
+    type: 'Weekend Batch · 15 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '50% off',
-    price: 23999,
-    originalPrice: 49998,
+    price: 399,
+    originalPrice: 999,
   },
 ]
 
@@ -334,7 +331,7 @@ function SubNav({ phone }) {
   );
 }
 
-/** Hero portrait with floating achievement badges â€” decorative, image-agnostic. */
+/** Hero portrait with floating achievement badges — decorative, image-agnostic. */
 function HeroPortrait({ instructor, statBadges }) {
   return (
     <div className="relative mx-auto hidden max-w-xs sm:max-w-sm lg:block">
@@ -371,7 +368,7 @@ function HeroPortrait({ instructor, statBadges }) {
   );
 }
 
-/** Video intro banner â€” keep the original layout and sizing, only swap the person image. */
+/** Video intro banner — keep the original layout and sizing, only swap the person image. */
 function VideoIntroBanner({ course }) {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -382,51 +379,51 @@ function VideoIntroBanner({ course }) {
     videoRef.current?.play?.();
   };
 
-  return (
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 via-blue-100 to-blue-800 shadow-card">
-      <video
-        ref={videoRef}
-        controls={playing}
-        onPlay={() => setPlaying(true)}
-        onPause={() => setPlaying(false)}
-        className="aspect-video w-full object-cover"
-        preload="metadata"
-      >
-        <source src={videoSrc} type="video/mp4" />
-      </video>
+  // return (
+  //   <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 via-blue-100 to-blue-800 shadow-card">
+  //     <video
+  //       ref={videoRef}
+  //       controls={playing}
+  //       onPlay={() => setPlaying(true)}
+  //       onPause={() => setPlaying(false)}
+  //       className="aspect-video w-full object-cover"
+  //       preload="metadata"
+  //     >
+  //       <source src={videoSrc} type="video/mp4" />
+  //     </video>
 
-      {!playing && (
-        <a
-          href="https://www.youtube.com/shorts/fNgZOHQhwnE"
-          target="_blank"
-          rel="noreferrer"
-          className="absolute inset-0 flex flex-col justify-between p-6 text-left sm:p-8"
-          aria-label="Play testimonial video"
-        >
-          <span className="w-fit rounded-lg bg-white/70 px-3 py-1.5 text-[11px] font-semibold text-ink backdrop-blur-sm">
-            Quick Introduction
-            <span className="block font-normal text-ink-muted">In a few minutes</span>
-          </span>
+  //     {!playing && (
+  //       <a
+  //         href="https://www.youtube.com/shorts/fNgZOHQhwnE"
+  //         target="_blank"
+  //         rel="noreferrer"
+  //         className="absolute inset-0 flex flex-col justify-between p-6 text-left sm:p-8"
+  //         aria-label="Play testimonial video"
+  //       >
+  //         <span className="w-fit rounded-lg bg-white/70 px-3 py-1.5 text-[11px] font-semibold text-ink backdrop-blur-sm">
+  //           Quick Introduction
+  //           <span className="block font-normal text-ink-muted">In a few minutes</span>
+  //         </span>
 
-          <div className="flex items-end justify-between gap-4">
-            <h3 className="text-2xl font-bold leading-tight text-blue-800 sm:text-4xl">
-              Why Get
-              <br />
-              {course.category || 'Certified'}?
-            </h3>
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary-600 text-white shadow-panel transition-transform hover:scale-105 sm:h-16 sm:w-16">
-              <Play size={24} fill="currentColor" />
-            </span>
-          </div>
-        </a>
-      )}
+  //         <div className="flex items-end justify-between gap-4">
+  //           <h3 className="text-2xl font-bold leading-tight text-blue-800 sm:text-4xl">
+  //             Why Get
+  //             <br />
+  //             {course.category || 'Certified'}?
+  //           </h3>
+  //           <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary-600 text-white shadow-panel transition-transform hover:scale-105 sm:h-16 sm:w-16">
+  //             <Play size={24} fill="currentColor" />
+  //           </span>
+  //         </div>
+  //       </a>
+  //     )}
 
 
-    </div >
-  );
+  //   </div >
+  // );
 }
 
-/** "Proven path" step flow â€” a real ordered sequence, so numbering is meaningful here. */
+/** "Proven path" step flow — a real ordered sequence, so numbering is meaningful here. */
 function ProvenPath({ steps }) {
   return (
     <div className="rounded-2xl bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 p-6 sm:p-8">
@@ -540,10 +537,10 @@ function BatchCard({ batch, format, index, course }) {
             {batch.discount}
           </span>
           <span className="font-mono text-xs text-ink-soft line-through">
-            {format(batch.originalPrice, batch.originalPrice)}
+            ${(batch.originalPrice, batch.originalPrice)}
           </span>
         </div>
-        <p className="font-mono text-base sm:text-lg font-bold text-ink whitespace-nowrap">{format(batch.price, batch.price)}</p>
+        <p className="font-mono text-base sm:text-lg font-bold text-ink whitespace-nowrap">${(batch.price, batch.price)}</p>
 
         <Button
           variant="outline"
@@ -589,7 +586,7 @@ function InfiniteTestimonialCarousel() {
 
               <div className="mt-8 flex-1">
                 <p className="text-xl leading-relaxed text-ink md:text-2xl">
-                  â€œ{testimonial.quote}â€
+                  “{testimonial.quote}”
                 </p>
               </div>
             </article>
@@ -635,7 +632,7 @@ function ReviewCard({ review }) {
   );
 }
 
-/** Certificate preview â€” displays the actual certificate image. */
+/** Certificate preview — displays the actual certificate image. */
 function CertificatePreview({ title }) {
   return (
     <div className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-card sm:p-12">
@@ -672,7 +669,7 @@ function AchievementBadge({ achievement }) {
   );
 }
 
-/** "Drop a query" lead-capture card â€” falls back to a self-contained form if
+/** "Drop a query" lead-capture card — falls back to a self-contained form if
  *  CourseContactForm expects different props than assumed here. */
 function LeadForm({ course, compact = false }) {
   const [submitted, setSubmitted] = useState(false);
@@ -940,7 +937,7 @@ export default function CourseDetailPage() {
           <div className="flex  flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
             <div className="relative w-full overflow-hidden rounded-xl border border-ink/[0.06] bg-white">
                 <video
-                  src="/Edutech_Graphics.mp4"
+                  src={video}
                   autoPlay
                   muted
                   loop
@@ -1057,7 +1054,7 @@ export default function CourseDetailPage() {
               <Badge tone="primary">Course Curriculum</Badge>
               <h2 className="mt-4 text-xl font-semibold text-ink sm:text-3xl">{course.title} Course Content</h2>
               <p className="mt-2 text-sm text-ink-muted">
-                {course.curriculum.length} comprehensive modules â€¢ {course.duration} of expert-led training
+                {course.curriculum.length} comprehensive modules • {course.duration} of expert-led training
               </p>
             </div>
             <Button
@@ -1102,10 +1099,10 @@ export default function CourseDetailPage() {
       <Section id="batches">
         <div className="flex flex-wrap items-center gap-3">
           <span className="flex items-center gap-1.5 text-xs font-medium text-ink-muted">
-            <Star size={13} className="text-[#4285F4]" fill="currentColor" /> 4.8/5 Â· 10,550 Reviews
+            <Star size={13} className="text-[#4285F4]" fill="currentColor" /> 4.8/5 · 10,550 Reviews
           </span>
           <span className="flex items-center gap-1.5 text-xs font-medium text-ink-muted">
-            <Star size={13} className="text-amber-400" fill="currentColor" /> 4.6/5 Â· 2,305 Reviews
+            <Star size={13} className="text-amber-400" fill="currentColor" /> 4.6/5 · 2,305 Reviews
           </span>
         </div>
         <h2 className="text-2xl font-semibold text-ink sm:text-3xl">
@@ -1157,7 +1154,7 @@ export default function CourseDetailPage() {
               </span>
               <div>
                 {/* <p className="text-base font-semibold text-ink">Corporate Training</p> */}
-                <p className="text-md font-bold text-ink-muted">Your workforce is your asset â€” up-skill it with our programs.</p>
+                <p className="text-md font-bold text-ink-muted">Your workforce is your asset — up-skill it with our programs.</p>
               </div>
             </div>
             <a href="/contact">
@@ -1243,7 +1240,7 @@ export default function CourseDetailPage() {
       </Section> */}
 
       {/* ---------------------------------------------------------------- */}
-      {/* FAQs â€” three themed groups, matching the reference layout         */}
+      {/* FAQs — three themed groups, matching the reference layout         */}
       {/* ---------------------------------------------------------------- */}
       {course.faqs && course.faqs.length > 0 && (
         <Section id="faqs" className="bg-surface-alt">
@@ -1558,12 +1555,12 @@ export default function CourseDetailPage() {
             <div className="flex items-baseline gap-1.5">
               <span className="font-mono text-base font-bold text-accent-600">
                 {currencyCode === 'INR'
-                  ? `â‚¹${course.priceINR.toLocaleString('en-IN')}`
+                  ? `₹${course.priceINR.toLocaleString('en-IN')}`
                   : `$${course.priceUSD.toLocaleString('en-US')}`}
               </span>
               <span className="font-mono text-xs text-ink-soft line-through">
                 {currencyCode === 'INR'
-                  ? `â‚¹${course.originalPriceINR.toLocaleString('en-IN')}`
+                  ? `₹${course.originalPriceINR.toLocaleString('en-IN')}`
                   : `$${course.originalPriceUSD.toLocaleString('en-US')}`}
               </span>
             </div>

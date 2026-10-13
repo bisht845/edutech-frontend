@@ -3,7 +3,7 @@ import Container from './Container';
 
 export default function Section({ id, className, containerClassName, children, as: Tag = 'section' }) {
   return (
-    <Tag id={id} className={cn('py-8 sm:py-20 lg:py-24', className)}>
+    <Tag id={id} className={cn('py-4 sm:py-6 lg:py-4', className)}>
       <Container className={containerClassName}>{children}</Container>
     </Tag>
   );
