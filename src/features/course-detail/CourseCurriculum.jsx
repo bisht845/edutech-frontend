@@ -38,8 +38,19 @@ export default function CourseCurriculum({ curriculum }) {
                   className="overflow-hidden"
                 >
                   <ul className="space-y-2 px-5 pb-5 pl-[3.25rem] sm:px-6 sm:pl-[3.75rem]">
+                    {module.Objectives && (
+                    <div className="mb-5">
+                      <h4 className="mb-2 text-sm font-semibold text-ink">
+                        Learning Objectives
+                      </h4>
+                      <p className="text-sm leading-6 text-ink-muted">
+                        {module.Objectives}
+                      </p>
+                    </div>
+                  )}
                     {module.topics.map((topic) => (
                       <li key={topic} className="flex items-center gap-2.5 text-sm text-ink-muted">
+                        
                         <CheckCircle2 size={14} className="shrink-0 text-success-500" />
                         {topic}
                       </li>
