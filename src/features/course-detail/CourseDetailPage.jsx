@@ -115,7 +115,7 @@ const DEFAULT_BATCHES = [
   {
     mode: 'Live Virtual Class',
     dateRange: 'Nov 1 - Nov 14',
-    time: 'IST: 07:30 PM – 09:50 PM',
+    time: 'EDT: 09:00 AM - 01:00 PM',
     type: 'Weekday Batch · 15 Sessions',
     shift: 'Evening Batch',
     trainer: 'S. Singh',
@@ -127,7 +127,7 @@ const DEFAULT_BATCHES = [
   {
     mode: 'Live Virtual Class',
     dateRange: 'Nov 15 - Nov 30',
-    time: 'IST: 07:00 AM – 11:30 AM',
+    time: 'EDT: 06:30 PM - 10:30 PM',
     type: 'Weekday Batch · 8 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
@@ -138,7 +138,7 @@ const DEFAULT_BATCHES = [
   // {
   //   mode: 'Live Virtual Class',
   //   dateRange: 'Oct 18  - Oct 28 ',
-  //   time: 'IST: 06:00 AM – 08:20 AM',
+  //   time: 'EDT: 06:00 AM – 08:20 AM',
   //   type: 'Weekend Batch · 15 Sessions',
   //   shift: 'Morning Batch',
   //   trainer: 'V. Raghavan',
@@ -151,7 +151,7 @@ const DEFAULT_BATCHES = [
   // {
   //   mode: 'Live Virtual Class',
   //   dateRange: 'Nov 7 - Dec 5',
-  //   time: 'IST: 06:00 AM – 08:20 AM',
+  //   time: 'EDT: 06:00 AM – 08:20 AM',
   //   type: 'Weekend Batch · 15 Sessions',
   //   shift: 'Morning Batch',
   //   trainer: 'V. Raghavan',
@@ -162,7 +162,7 @@ const DEFAULT_BATCHES = [
   {
     mode: 'Weakend Class',
     dateRange: 'Dec 15 - Dec 25',
-    time: 'IST: 06:00 AM – 10:00 AM',
+    time: 'EDT: 09:00 AM - 01:00 PM',
     type: 'Weekend Batch · 15 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
@@ -173,7 +173,7 @@ const DEFAULT_BATCHES = [
   {
     mode: 'Weakend Class',
     dateRange: 'Jan 10 - Jan 20',
-    time: 'IST: 06:00 AM – 10:00 AM',
+    time: 'EDT: 06:30 PM - 10:30 PM',
     type: 'Weekend Batch · 15 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
