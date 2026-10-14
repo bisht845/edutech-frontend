@@ -47,7 +47,7 @@ export const SOCIAL_LINKS = [
 
 export const FOOTER_COMPANY_LINKS = [
   { label: 'About Us', to: 'https://pmp.edutechskills.com/about' },
-  { label: 'Careers', to: '/careers' },
+  // { label: 'Careers', to: '/careers' },  
   { label: 'Contact Us', to: '/contact' },
 ];
 

@@ -120,7 +120,7 @@ const DEFAULT_BATCHES = [
     shift: 'Evening Batch',
     trainer: 'S. Singh',
     discount: '50% off',
-    price: 399,
+    price: 499,
     originalPrice: 999,
   },
 
@@ -132,7 +132,7 @@ const DEFAULT_BATCHES = [
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '50% off',
-    price: 399,
+    price: 499,
     originalPrice: 999,
   },
   // {
@@ -143,7 +143,7 @@ const DEFAULT_BATCHES = [
   //   shift: 'Morning Batch',
   //   trainer: 'V. Raghavan',
   //   discount: '50% off',
-  //   price: 399,
+  //   price: 499,
   //   originalPrice: 999,
   // },
 
@@ -156,29 +156,29 @@ const DEFAULT_BATCHES = [
   //   shift: 'Morning Batch',
   //   trainer: 'V. Raghavan',
   //   discount: '50% off',
-  //   price: 399,
+  //   price: 499,
   //   originalPrice: 999,
   // },
   {
     mode: 'Weakend Class',
-    dateRange: 'Dec 15 - Dec 25',
+    dateRange: 'Nov 2 - Nov 12',
     time: 'EDT: 09:00 AM - 01:00 PM',
     type: 'Weekend Batch · 15 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '50% off',
-    price: 399,
+    price: 499,
     originalPrice: 999,
   },
   {
     mode: 'Weakend Class',
-    dateRange: 'Jan 10 - Jan 20',
+    dateRange: 'Nov 18 - Nov 28',
     time: 'EDT: 06:30 PM - 10:30 PM',
     type: 'Weekend Batch · 15 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '50% off',
-    price: 399,
+    price: 499,
     originalPrice: 999,
   },
 ]
@@ -1448,9 +1448,9 @@ export default function CourseDetailPage() {
               <h2 className="mt-4 text-2xl font-semibold text-ink sm:text-3xl">People Also Viewed Courses Like</h2>
             </div>
           </div>
- <div className="mt-12 border-t  pt-6 flex justify-center">
+ <div className="mt-12 border-t  pt-6 flex ">
                 {/* <h3 className="font-mono text-xs font-semibold uppercase tracking-wider px-2">Offerings</h3> */}
-                <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+                <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 justify-center ">
                   {DOMAINS.map((domain) => (
                     <Link
                       key={domain.id}
