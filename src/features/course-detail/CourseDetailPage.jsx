@@ -112,23 +112,23 @@ const DEFAULT_PLAN_ROWS = [
 
 const DEFAULT_BATCHES = [
 
-  {
-    mode: 'Live Virtual Class',
-    dateRange: 'Oct 26 - Nov 5',
-    time: 'EDT: 09:00 AM - 01:00 PM',
-    type: 'Weekday Batch · 15 Sessions',
-    shift: 'Evening Batch',
-    trainer: 'S. Singh',
-    discount: '60% off',
-    price: 399,
-    originalPrice: 999,
-  },
+  // {
+  //   mode: 'Live Virtual Class',
+  //   dateRange: 'Oct 26 - Nov 5',
+  //   time: 'EDT: 09:00 AM - 01:00 PM',
+  //   type: 'Weekday Batch · 15 Sessions',
+  //   shift: 'Evening Batch',
+  //   trainer: 'S. Singh',
+  //   discount: '60% off',
+  //   price: 399,
+  //   originalPrice: 999,
+  // },
 
   {
     mode: 'Live Virtual Class',
     dateRange: 'Oct 24 - Nov 21',
     time: 'EDT: 09:00 AM - 01:00 PM',
-    type: 'Weekday Batch · 8 Sessions',
+    type: 'Weekend Batch · 8 Sessions',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '60% off',
