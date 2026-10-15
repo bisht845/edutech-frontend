@@ -11,8 +11,8 @@ import {
 
 const SOCIAL_ICONS = [
   { Icon: Facebook, href: 'https://facebook.com/edutechskills', label: 'Facebook' },
-  { Icon: Instagram, href: 'https://instagram.com/edutech_skills', label: 'Instagram' },
-  { Icon: Linkedin, href: 'https://linkedin.com/company/edutechskills', label: 'LinkedIn' },
+  { Icon: Instagram, href: 'https://www.instagram.com/edutech_skills', label: 'Instagram' },
+  { Icon: Linkedin, href: 'https://www.linkedin.com/company/edutech_skills/', label: 'LinkedIn' },
 ];
 
 function FooterColumn({ title, links }) {
