@@ -128,7 +128,7 @@ const DEFAULT_BATCHES = [
     mode: 'Live Virtual Class',
     dateRange: 'Oct 24 - Nov 21',
     time: 'EDT: 09:00 AM - 01:00 PM',
-    type: 'Weekend Batch · 8 Sessions',
+    type: 'Weekend Batch ',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '60% off',
@@ -139,7 +139,7 @@ const DEFAULT_BATCHES = [
     mode: 'Live Virtual Class',
     dateRange: 'Nov 7  - Dec-5 ',
     time: 'EDT: 09:00 AM - 01:00 PM',
-    type: 'Weekend Batch · 15 Sessions',
+    type: 'Weekend Batch ',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '60% off',
@@ -150,7 +150,7 @@ const DEFAULT_BATCHES = [
     mode: 'Weakend Class',
     dateRange: 'Nov 21 - Dec 19',
     time: 'EDT: 09:00 AM - 01:00 PM',
-    type: 'Weekend Batch · 15 Sessions',
+    type: 'Weekend Batch ',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '60% off',
@@ -161,7 +161,7 @@ const DEFAULT_BATCHES = [
     mode: 'Weakend Class',
     dateRange: 'Dec 05, 2026 - Jan 02, 2027',
     time: 'EDT: 09:00 AM - 01:00 PM',
-    type: 'Weekend Batch · 15 Sessions',
+    type: 'Weekend Batch ',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '60% off',
@@ -173,7 +173,7 @@ const DEFAULT_BATCHES = [
     mode: 'Live Virtual Class',
     dateRange: 'Dec 19, 2026 - Jan 16, 2027',
     time: 'EDT: 09:00 AM - 01:00 PM',
-    type: 'Weekend Batch · 15 Sessions',
+    type: 'Weekend Batch ',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '60% off',
@@ -184,7 +184,7 @@ const DEFAULT_BATCHES = [
     mode: 'Live Virtual Class',
     dateRange: 'Jan 16 - Feb 13, 2027',
     time: 'EDT: 09:00 AM - 01:00 PM',
-    type: 'Weekend Batch · 15 Sessions',
+    type: 'Weekend Batch ',
     shift: 'Morning Batch',
     trainer: 'V. Raghavan',
     discount: '60% off',
@@ -517,8 +517,8 @@ function BatchCard({ batch, format, index, course }) {
           <span className="flex items-center gap-1">
             <CalendarClock size={12} /> {batch.type}
           </span>
-          <span>{batch.shift}</span>
-          <span>Trainer: {batch.trainer}</span>
+          {/* <span>{batch.shift}</span> */}
+          {/* <span>Trainer: {batch.trainer}</span> */}
         </div>
       </div>
 
@@ -1108,7 +1108,7 @@ export default function CourseDetailPage() {
       {/* Upcoming batches                                                  */}
       {/* ---------------------------------------------------------------- */}
       <Section id="batches">
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="justify-center flex flex-wrap items-center gap-3">
           <span className="flex items-center gap-1.5 text-xs font-medium text-ink-muted">
             <Star size={13} className="text-[#4285F4]" fill="currentColor" /> 4.8/5 · 10,550 Reviews
           </span>
@@ -1116,11 +1116,11 @@ export default function CourseDetailPage() {
             <Star size={13} className="text-amber-400" fill="currentColor" /> 4.6/5 · 2,305 Reviews
           </span>
         </div>
-        <h2 className="text-2xl font-semibold text-ink sm:text-3xl">
+        <h2 className="text-center text-2xl font-semibold text-ink sm:text-3xl">
           Upcoming {course.title}  Batches
         </h2>
 
-        <div className="mt-4 space-y-4">
+        <div className="mx-auto w-full max-w-4xl mt-5 space-y-4">
           {batches.slice(0, 2).map((batch, i) => (
             <BatchCard key={i} batch={batch} format={format} index={i} course={course} />
           ))}
@@ -1132,7 +1132,7 @@ export default function CourseDetailPage() {
           ))}
         </div>
 
-        <div className="flex mt-4 flex-col items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-blue-900 to-blue-700 p-6 text-center sm:flex-row sm:text-left">
+        <div className="mx-auto max-w-4xl flex mt-4 flex-col items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-blue-900 to-blue-700 p-6 text-center sm:flex-row sm:text-left">
           <p className="text-base font-semibold text-white">
             Do you want to customize
             <br className="hidden sm:block" /> your batch request?
